@@ -1,0 +1,63 @@
+RVN:
+  url: "http://explorer.threeeyed.info/"
+  method: "diff"
+  attribute:
+    - height
+    - time
+    - difficulty
+    - nonce
+
+EXVO:
+  url: "https://explorer.exvo.io/"
+  method: "share"
+  attribute:
+    - height
+    - time
+    - difficulty
+    - nonce
+
+PGN:
+  url: "http://explorer.pigeoncoin.org/"
+  method: "diff"
+  attribute:
+    - height
+    - time
+    - difficulty
+    - nonce
+
+SPD:
+  url: "http://explorer.stipend.me/"
+  method: "share_pos"
+  attribute:
+    - height
+    - time
+    - difficulty
+    - flags
+    - nonce
+
+LUX:
+  url: "https://explorer.luxcore.io/"
+  method: "share_pos"
+  attribute:
+    - height
+    - time
+    - difficulty
+    - nonce
+
+PROTON:
+  url: "https://explorer.protoncoin.io/"
+  method: "share"
+  attribute:
+    - height
+    - time
+    - difficulty
+    - nonce
+
+RDEN:
+  url: "http://explorer.reden.io/"
+  method: "share"
+  attribute:
+    - height
+    - time
+    - difficulty
+    - nonce
