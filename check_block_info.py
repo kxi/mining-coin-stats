@@ -89,8 +89,14 @@ def main():
                     time.sleep(1)
                     continue
 
-                refined_block_info = dict((key, block_info[key])
-                                          for key in block_attribute)
+                try:
+                    refined_block_info = dict((key, block_info[key])
+                                              for key in block_attribute)
+                except Exception as e:
+                    print("Extract Block Info Exception: {}".format(e))
+                    recent_block_id -= 1
+                    count += 1                    
+                    continue
 
                 print("Retrieve Coin [{}] Block Info Successful. Height = {}".format(coin, refined_block_info["height"]))
                 print("")
