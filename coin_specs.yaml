@@ -61,3 +61,14 @@ RDEN:
     - time
     - difficulty
     - nonce
+
+XVG:
+  url: "https://verge-blockchain.info/"
+  method: "share_pos_multi_algo"
+  attribute:
+    - height
+    - time
+    - difficulty
+    - nonce
+    - algo
+    - flags
