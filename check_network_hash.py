@@ -7,10 +7,12 @@ import requests as req
 import pandas as pd
 import yaml
 
+req.packages.urllib3.disable_warnings()
+
 COIN_NETHASH_INFO_PATH = "coin_nethash_info"
 
 def get_nethash_info(coin_explorer_url):
-    r = req.get("{}api/getnetworkhashps".format(coin_explorer_url))
+    r = req.get("{}api/getnetworkhashps".format(coin_explorer_url), verify=False)
     nethash = int(float(r.text))
     return nethash
 
@@ -43,7 +45,7 @@ def main():
             coin_explorer_url = coin_dict[coin]["url"]
             print(coin_explorer_url)
 
-            r = req.get("{}api/getblockcount".format(coin_explorer_url))
+            r = req.get("{}api/getblockcount".format(coin_explorer_url), verify=False)
             recent_block_id = int(r.text)
 
             fname = os.path.join(COIN_NETHASH_INFO_PATH, coin+"_nethash_info.csv")
@@ -58,7 +60,7 @@ def main():
                 print(coin_explorer_url)
 
                 try:
-                    r = req.get("{}api/getblockcount".format(coin_explorer_url))
+                    r = req.get("{}api/getblockcount".format(coin_explorer_url), verify=False)
                     recent_block_id = int(r.text)
                     nethash_info = get_nethash_info(coin_explorer_url)
                 except Exception as e:
