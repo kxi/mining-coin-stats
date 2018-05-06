@@ -7,14 +7,16 @@ import requests as req
 import pandas as pd
 import yaml
 
+req.packages.urllib3.disable_warnings()
+
 COIN_BLOCK_INFO_PATH = "coin_block_info"
 
 def get_block_info(block_id, coin_explorer_url):
     try:
-        r = req.get("{}api/getblockhash?index={}".format(coin_explorer_url, block_id))
+        r = req.get("{}api/getblockhash?index={}".format(coin_explorer_url, block_id), verify=False)
         block_hash = r.text
 
-        r = req.get("{}api/getblock?hash={}".format(coin_explorer_url, block_hash))
+        r = req.get("{}api/getblock?hash={}".format(coin_explorer_url, block_hash), verify=False)
         block_info = r.json()
     except Exception as e:
         print("GET Request Exception: {}".format(e))
@@ -45,6 +47,9 @@ def main():
     else:
         print("No Such Coin: [{}]".format(sys.argv[2]))
 
+    sleep_interval = float(sys.argv[4])
+
+
     for coin in coin_collection:
 
         coin_explorer_url = coin_dict[coin]["url"]
@@ -53,7 +58,7 @@ def main():
         print(coin_explorer_url)
         print(block_attribute)
 
-        r = req.get("{}api/getblockcount".format(coin_explorer_url))
+        r = req.get("{}api/getblockcount".format(coin_explorer_url), verify=False)
         recent_block_id = int(r.text)
         print(recent_block_id)
 
@@ -86,7 +91,7 @@ def main():
 
                 block_info = get_block_info(recent_block_id, coin_explorer_url)
                 if not block_info:
-                    time.sleep(1)
+                    time.sleep(sleep_interval)
                     continue
 
                 try:
@@ -107,7 +112,7 @@ def main():
 
                 recent_block_id -= 1
                 count += 1
-                time.sleep(0.2)
+                time.sleep(sleep_interval)
                 df.sort_values(by="height", ascending=False)\
                   .head(2000)\
                   .to_csv(fname, index=False)
