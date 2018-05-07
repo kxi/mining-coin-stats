@@ -6,6 +6,7 @@ RVN:
     - time
     - difficulty
     - nonce
+  enabled: "yes"
 
 EXVO:
   url: "https://explorer.exvo.io/"
@@ -15,6 +16,17 @@ EXVO:
     - time
     - difficulty
     - nonce
+  enabled: "yes"
+
+AXS:
+  url: "http://explorer.axs.gold:3001/"
+  method: "share"
+  attribute:
+    - height
+    - time
+    - difficulty
+    - nonce
+  enabled: "no"
 
 PGN:
   url: "http://explorer.pigeoncoin.org/"
@@ -24,6 +36,7 @@ PGN:
     - time
     - difficulty
     - nonce
+  enabled: "yes"
 
 SPD:
   url: "http://explorer.stipend.me/"
@@ -34,6 +47,7 @@ SPD:
     - difficulty
     - flags
     - nonce
+  enabled: "yes"
 
 LUX:
   url: "https://explorer.luxcore.io/"
@@ -43,6 +57,7 @@ LUX:
     - time
     - difficulty
     - nonce
+  enabled: "yes"
 
 PROTON:
   url: "https://explorer.protoncoin.io/"
@@ -52,6 +67,7 @@ PROTON:
     - time
     - difficulty
     - nonce
+  enabled: "yes"
 
 RDEN:
   url: "http://explorer.reden.io/"
@@ -61,6 +77,7 @@ RDEN:
     - time
     - difficulty
     - nonce
+  enabled: "yes"
 
 XVG:
   url: "https://verge-blockchain.info/"
@@ -72,3 +89,4 @@ XVG:
     - nonce
     - algo
     - flags
+  enabled: "no"

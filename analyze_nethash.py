@@ -44,6 +44,10 @@ def main():
     gs_coin_list = get_gs_coin_list(wks)
 
     for coin in coin_collection:
+
+        if coin_dict[coin]['enabled'] == "no":
+            continue
+        
         coin_gs_row = gs_coin_list.index(coin) + 1
         fname = os.path.join(COIN_NETHASH_INFO_PATH, coin+"_nethash_info.csv")
         df = pd.read_csv(fname)
