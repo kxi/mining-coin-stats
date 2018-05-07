@@ -70,8 +70,12 @@ def main():
 
         if sys.argv[1] == "update":
 
-            last_n_block = int(sys.argv[3])
+            # Initialize it if Block File Doesn't Exist
+            if not os.path.isfile(fname):
+                df_init(recent_block_id, block_attribute, coin_explorer_url, fname)
 
+            # Update Part
+            last_n_block = int(sys.argv[3])
 
             count = 0
 
@@ -100,7 +104,7 @@ def main():
                 except Exception as e:
                     print("Extract Block Info Exception: {}".format(e))
                     recent_block_id -= 1
-                    count += 1                    
+                    count += 1
                     continue
 
                 print("Retrieve Coin [{}] Block Info Successful. Height = {}".format(coin, refined_block_info["height"]))
