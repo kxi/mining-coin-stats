@@ -78,7 +78,7 @@ def main():
                 if recent_block_id in df["height"].tolist():
                     print("Coin [{}] Block Info Height Existed. Bypass".format(coin))
                     print("")
-                    time.sleep(3)
+                    time.sleep(0.5)
                     continue
 
                 labels = ['height','nethash']
@@ -88,6 +88,6 @@ def main():
                 df.sort_values(by="height", ascending=False)\
                   .head(2000)\
                   .to_csv(fname, index=False)
-                time.sleep(3)
 
+            break
 main()
