@@ -7,6 +7,7 @@ RVN:
     - difficulty
     - nonce
   enabled: "yes"
+  explorer_type: "Iquidus"
 
 EXVO:
   url: "https://explorer.exvo.io/"
@@ -17,6 +18,7 @@ EXVO:
     - difficulty
     - nonce
   enabled: "yes"
+  explorer_type: "Iquidus"
 
 PGN:
   url: "http://explorer.pigeoncoin.org/"
@@ -27,6 +29,7 @@ PGN:
     - difficulty
     - nonce
   enabled: "yes"
+  explorer_type: "Iquidus"
 
 AXS:
   url: "http://explorer.axs.gold:3001/"
@@ -37,6 +40,7 @@ AXS:
     - difficulty
     - nonce
   enabled: "no"
+  explorer_type: "Iquidus"
 
 ELLI:
   url: "https://explorer.elliotproject.org/"
@@ -47,6 +51,19 @@ ELLI:
     - difficulty
     - nonce
   enabled: "yes"
+  explorer_type: "Iquidus"
+
+FLM:
+  url: "https://explorer.folm.io/"
+  method: "share"
+  attribute:
+    - Block
+    - Time
+    - Network
+    - Difficulty
+  enabled: "yes"
+  explorer_type: "UExplorer"
+
 
 SPD:
   url: "http://explorer.stipend.me/"
@@ -58,6 +75,7 @@ SPD:
     - flags
     - nonce
   enabled: "yes"
+  explorer_type: "Iquidus"
 
 LUX:
   url: "https://explorer.luxcore.io/"
@@ -68,6 +86,7 @@ LUX:
     - difficulty
     - nonce
   enabled: "yes"
+  explorer_type: "Iquidus"
 
 PROTON:
   url: "https://explorer.protoncoin.io/"
@@ -78,6 +97,7 @@ PROTON:
     - difficulty
     - nonce
   enabled: "yes"
+  explorer_type: "Iquidus"
 
 RDEN:
   url: "http://explorer.reden.io/"
@@ -88,6 +108,7 @@ RDEN:
     - difficulty
     - nonce
   enabled: "yes"
+  explorer_type: "Iquidus"
 
 XVG:
   url: "https://verge-blockchain.info/"
@@ -100,3 +121,4 @@ XVG:
     - algo
     - flags
   enabled: "no"
+  explorer_type: "Iquidus"

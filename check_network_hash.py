@@ -53,9 +53,8 @@ def main():
 
 
     if sys.argv[1] == "update":
-        while True:
-            for coin in coin_collection:
-
+        for coin in coin_collection:
+            if coin_dict[coin]["explorer_type"] == "Iquidus":
                 coin_explorer_url = coin_dict[coin]["url"]
                 print(coin_explorer_url)
 
@@ -69,10 +68,10 @@ def main():
                     continue
 
                 fname = os.path.join(COIN_NETHASH_INFO_PATH, coin+"_nethash_info.csv")
-                
+
                 if not os.path.isfile(fname):
                     df_init(recent_block_id, coin_explorer_url, fname)
-                
+
                 df = pd.read_csv(fname)
                 row = df.size
 
@@ -92,5 +91,4 @@ def main():
                   .head(2000)\
                   .to_csv(fname, index=False)
 
-            break
 main()

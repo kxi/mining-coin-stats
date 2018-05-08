@@ -12,6 +12,7 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
 COIN_NETHASH_INFO_PATH = "coin_nethash_info"
+COIN_BLOCK_INFO_PATH = "coin_block_info"
 
 def connect_to_gs():
     scope = ['https://spreadsheets.google.com/feeds']
@@ -47,15 +48,21 @@ def main():
 
         if coin_dict[coin]['enabled'] == "no":
             continue
-        
-        coin_gs_row = gs_coin_list.index(coin) + 1
-        fname = os.path.join(COIN_NETHASH_INFO_PATH, coin+"_nethash_info.csv")
-        df = pd.read_csv(fname)
 
+        coin_gs_row = gs_coin_list.index(coin) + 1
         dt_now = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
+        if coin_dict[coin]["explorer_type"] == "Iquidus":
+            fname = os.path.join(COIN_NETHASH_INFO_PATH, coin+"_nethash_info.csv")
+            df = pd.read_csv(fname)
+            nethash_latest = int(df['nethash'][0])
+
+        if coin_dict[coin]["explorer_type"] == "UExplorer":
+            fname = os.path.join(COIN_BLOCK_INFO_PATH, coin+"_block_info.csv")
+            df = pd.read_csv(fname)
+            nethash_latest = int(df['Network'][0])
+
         print("Analyzing Coin [{}]".format(coin))
-        nethash_latest = int(df['nethash'][0])
 
         print("Coin [{}] Nethash is {}".format(coin, nethash_latest))
 

@@ -56,11 +56,23 @@ def main():
 
         if coin_dict[coin]['method'] == "share":
             print("Analyzing Coin [{}]".format(coin))
-            df_block_rate = df[['height','time']]
-            MA_window = min(400, df_block_rate.count()[0]-1)
-            df_block_rate = df_block_rate.diff(-MA_window).dropna()
-            df_block_rate['block_per_day']=df_block_rate['height']/df_block_rate['time']*3600*24
-            block_speed_latest = int(df_block_rate['block_per_day'][0])
+
+            if coin_dict[coin]["explorer_type"] == "Iquidus":
+                df_block_rate = df[['height','time']]
+
+            if coin_dict[coin]["explorer_type"] == "UExplorer":
+                df_block_rate = \
+                  df[['Block','Time']].rename(index=str, columns={"Block": "height", "Time": "time"})
+
+            try:
+                MA_window = min(400, df_block_rate.count()[0]-1)
+                df_block_rate = df_block_rate.diff(-MA_window).dropna()
+                df_block_rate['block_per_day']=df_block_rate['height']/df_block_rate['time']*3600*24
+                block_speed_latest = int(df_block_rate['block_per_day'][0])
+            except Exception as e:
+                print("GET Request Exception: {}".format(e))
+                print("")
+                block_speed_latest = 0
             print("Coin [{}] Block Speed is {} Blocks/Day".format(coin, block_speed_latest))
 
             wks.update_acell('E'+str(coin_gs_row), block_speed_latest)
@@ -74,9 +86,5 @@ def main():
 
             wks.update_acell('I'+str(coin_gs_row), diff_latest)
             wks.update_acell('X'+str(coin_gs_row), dt_now)
-
-
-
-
 
 main()
