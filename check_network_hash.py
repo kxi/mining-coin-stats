@@ -69,7 +69,10 @@ def main():
                     continue
 
                 fname = os.path.join(COIN_NETHASH_INFO_PATH, coin+"_nethash_info.csv")
-
+                
+                if not os.path.isfile(fname):
+                    df_init(recent_block_id, coin_explorer_url, fname)
+                
                 df = pd.read_csv(fname)
                 row = df.size
 
