@@ -18,6 +18,16 @@ EXVO:
     - nonce
   enabled: "yes"
 
+PGN:
+  url: "http://explorer.pigeoncoin.org/"
+  method: "diff"
+  attribute:
+    - height
+    - time
+    - difficulty
+    - nonce
+  enabled: "yes"
+
 AXS:
   url: "http://explorer.axs.gold:3001/"
   method: "share"
@@ -28,9 +38,9 @@ AXS:
     - nonce
   enabled: "no"
 
-PGN:
-  url: "http://explorer.pigeoncoin.org/"
-  method: "diff"
+ELLI:
+  url: "https://explorer.elliotproject.org/"
+  method: "share"
   attribute:
     - height
     - time
