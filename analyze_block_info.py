@@ -64,6 +64,9 @@ def main():
                 df_block_rate = \
                   df[['Block','Time']].rename(index=str, columns={"Block": "height", "Time": "time"})
 
+            if coin_dict[coin]["explorer_type"] == "wallet":
+                df_block_rate = df[['height','time']]
+
             try:
                 MA_window = min(400, df_block_rate.count()[0]-1)
                 df_block_rate = df_block_rate.diff(-MA_window).dropna()

@@ -17,7 +17,7 @@ EXVO:
     - time
     - difficulty
     - nonce
-  enabled: "yes"
+  enabled: "no"
   explorer_type: "Iquidus"
 
 PGN:
@@ -122,3 +122,16 @@ XVG:
     - flags
   enabled: "no"
   explorer_type: "Iquidus"
+
+MONA:
+  cmd: "monacoin-cli"
+  method: "share"
+  nethash_block: 30
+  attribute:
+    - height
+    - time
+    - difficulty
+    - nonce
+    - nethash
+  enabled: "yes"
+  explorer_type: "wallet"

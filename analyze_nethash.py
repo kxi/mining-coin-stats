@@ -62,6 +62,11 @@ def main():
             df = pd.read_csv(fname)
             nethash_latest = int(df['Network'][0])
 
+        if coin_dict[coin]["explorer_type"] == "wallet":
+            fname = os.path.join(COIN_BLOCK_INFO_PATH, coin+"_block_info.csv")
+            df = pd.read_csv(fname)
+            nethash_latest = int(df['nethash'][0])
+
         print("Analyzing Coin [{}]".format(coin))
 
         print("Coin [{}] Nethash is {}".format(coin, nethash_latest))
