@@ -63,6 +63,10 @@ def main():
 
 
     for coin in coin_collection:
+
+        if coin_dict[coin]["enabled"] == "no":
+            continue
+        
         if coin_dict[coin]["explorer_type"] == "wallet":
             coin_wallet_cmd = coin_dict[coin]["cmd"]
             block_attribute = coin_dict[coin]["attribute"]

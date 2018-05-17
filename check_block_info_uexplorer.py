@@ -46,6 +46,10 @@ def main():
 
 
     for coin in coin_collection:
+
+        if coin_dict[coin]["enabled"] == "no":
+            continue
+
         if coin_dict[coin]["explorer_type"] == "UExplorer":
             coin_explorer_url = coin_dict[coin]["url"]
             block_attribute = coin_dict[coin]["attribute"]
