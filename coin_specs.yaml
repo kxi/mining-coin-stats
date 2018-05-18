@@ -100,7 +100,8 @@ PROTON:
   explorer_type: "Iquidus"
 
 RDEN:
-  url: "http://explorer.reden.io/"
+  # url: "http://explorer.reden.io/"
+  cmd: "reden-cli"
   method: "share"
   attribute:
     - height
@@ -108,7 +109,9 @@ RDEN:
     - difficulty
     - nonce
   enabled: "yes"
-  explorer_type: "Iquidus"
+  # explorer_type: "Iquidus"
+  explorer_type: "wallet"
+
 
 XVG:
   url: "https://verge-blockchain.info/"
