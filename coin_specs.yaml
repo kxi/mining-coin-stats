@@ -103,11 +103,13 @@ RDEN:
   # url: "http://explorer.reden.io/"
   cmd: "reden-cli"
   method: "share"
+  nethash_block: 30
   attribute:
     - height
     - time
     - difficulty
     - nonce
+    - nethash
   enabled: "yes"
   # explorer_type: "Iquidus"
   explorer_type: "wallet"
