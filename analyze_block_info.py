@@ -79,7 +79,7 @@ def main():
             print("Coin [{}] Block Speed is {} Blocks/Day".format(coin, block_speed_latest))
 
             wks.update_acell('E'+str(coin_gs_row), block_speed_latest)
-            wks.update_acell('X'+str(coin_gs_row), dt_now)
+            wks.update_acell('U'+str(coin_gs_row), dt_now)
 
         if coin_dict[coin]['method'] == "diff":
             print("Analyzing Coin [{}]".format(coin))
@@ -88,6 +88,6 @@ def main():
             print("Coin [{}] Difficulty is {}".format(coin, diff_latest))
 
             wks.update_acell('I'+str(coin_gs_row), diff_latest)
-            wks.update_acell('X'+str(coin_gs_row), dt_now)
+            wks.update_acell('U'+str(coin_gs_row), dt_now)
 
 main()

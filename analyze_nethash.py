@@ -72,6 +72,6 @@ def main():
         print("Coin [{}] Nethash is {}".format(coin, nethash_latest))
 
         wks.update_acell('L'+str(coin_gs_row), nethash_latest)
-        wks.update_acell('Y'+str(coin_gs_row), dt_now)
+        wks.update_acell('V'+str(coin_gs_row), dt_now)
 
 main()
