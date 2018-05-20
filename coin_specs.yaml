@@ -14,7 +14,7 @@ RDEN:
   # url: "http://explorer.reden.io/"
   cmd: "reden-cli"
   method: "share"
-  nethash_block: 30
+  nethash_block: 60
   attribute:
     - height
     - time
@@ -66,7 +66,7 @@ ELLI:
   # url: "https://explorer.elliotproject.org/"
   cmd: "elli-cli"
   method: "share"
-  nethash_block: 30
+  nethash_block: 60
   attribute:
     - height
     - time
@@ -105,7 +105,7 @@ LUX:
 GIN:
   cmd: "gincoin-cli"
   method: "share"
-  nethash_block: 30
+  nethash_block: 60
   attribute:
     - height
     - time
@@ -119,7 +119,7 @@ GIN:
 DXC:
   cmd: "dixicoin-cli"
   method: "share"
-  nethash_block: 30
+  nethash_block: 60
   attribute:
     - height
     - time
@@ -133,7 +133,7 @@ DXC:
 FLM:
   cmd: "folm-cli"
   method: "share"
-  nethash_block: 30
+  nethash_block: 60
   attribute:
     - height
     - time
@@ -183,7 +183,7 @@ SPD:
 IFX:
   cmd: "infinex-cli"
   method: "share"
-  nethash_block: 30
+  nethash_block: 60
   attribute:
     - height
     - time
@@ -197,7 +197,7 @@ IFX:
 STAK:
   cmd: "straks-cli"
   method: "share"
-  nethash_block: 30
+  nethash_block: 60
   attribute:
     - height
     - time
@@ -225,7 +225,7 @@ XVG:
 VTC:
   cmd: "vertcoin-cli"
   method: "share"
-  nethash_block: 30
+  nethash_block: 60
   attribute:
     - height
     - time
@@ -239,7 +239,7 @@ VTC:
 MONA:
   cmd: "monacoin-cli"
   method: "share"
-  nethash_block: 30
+  nethash_block: 60
   attribute:
     - height
     - time
