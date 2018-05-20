@@ -9,6 +9,95 @@ RVN:
   enabled: "yes"
   explorer_type: "Iquidus"
 
+EXVO:
+  url: "https://explorer.exvo.io/"
+  method: "share"
+  attribute:
+    - height
+    - time
+    - difficulty
+    - nonce
+  enabled: "no"
+  explorer_type: "Iquidus"
+
+PGN:
+  url: "http://explorer.pigeoncoin.org/"
+  method: "diff"
+  attribute:
+    - height
+    - time
+    - difficulty
+    - nonce
+  enabled: "yes"
+  explorer_type: "Iquidus"
+
+AXS:
+  url: "http://explorer.axs.gold:3001/"
+  method: "share"
+  attribute:
+    - height
+    - time
+    - difficulty
+    - nonce
+  enabled: "no"
+  explorer_type: "Iquidus"
+
+ELLI:
+  url: "https://explorer.elliotproject.org/"
+  method: "share"
+  attribute:
+    - height
+    - time
+    - difficulty
+    - nonce
+  enabled: "yes"
+  explorer_type: "Iquidus"
+
+FLM:
+  url: "https://explorer.folm.io/"
+  method: "share"
+  attribute:
+    - Block
+    - Time
+    - Network
+    - Difficulty
+  enabled: "yes"
+  explorer_type: "UExplorer"
+
+
+SPD:
+  url: "http://explorer.stipend.me/"
+  method: "share_pos"
+  attribute:
+    - height
+    - time
+    - difficulty
+    - flags
+    - nonce
+  enabled: "yes"
+  explorer_type: "Iquidus"
+
+LUX:
+  url: "https://explorer.luxcore.io/"
+  method: "share_pos"
+  attribute:
+    - height
+    - time
+    - difficulty
+    - nonce
+  enabled: "yes"
+  explorer_type: "Iquidus"
+
+PROTON:
+  url: "https://explorer.protoncoin.io/"
+  method: "share"
+  attribute:
+    - height
+    - time
+    - difficulty
+    - nonce
+  enabled: "yes"
+  explorer_type: "Iquidus"
 
 RDEN:
   # url: "http://explorer.reden.io/"
@@ -25,189 +114,6 @@ RDEN:
   # explorer_type: "Iquidus"
   explorer_type: "wallet"
 
-
-EXVO:
-  url: "https://explorer.exvo.io/"
-  method: "share"
-  attribute:
-    - height
-    - time
-    - difficulty
-    - nonce
-  enabled: "no"
-  explorer_type: "Iquidus"
-
-
-PGN:
-  url: "http://explorer.pigeoncoin.org/"
-  method: "diff"
-  attribute:
-    - height
-    - time
-    - difficulty
-    - nonce
-  enabled: "yes"
-  explorer_type: "Iquidus"
-
-
-AXS:
-  url: "http://explorer.axs.gold:3001/"
-  method: "share"
-  attribute:
-    - height
-    - time
-    - difficulty
-    - nonce
-  enabled: "no"
-  explorer_type: "Iquidus"
-
-
-ELLI:
-  # url: "https://explorer.elliotproject.org/"
-  cmd: "elli-cli"
-  method: "share"
-  nethash_block: 30
-  attribute:
-    - height
-    - time
-    - difficulty
-    - nonce
-    - nethash
-  enabled: "yes"
-  # explorer_type: "Iquidus"
-  explorer_type: "wallet"
-
-
-PROTON:
-  url: "https://explorer.protoncoin.io/"
-  method: "share"
-  attribute:
-    - height
-    - time
-    - difficulty
-    - nonce
-  enabled: "yes"
-  explorer_type: "Iquidus"
-
-
-LUX:
-  url: "https://explorer.luxcore.io/"
-  method: "share_pos"
-  attribute:
-    - height
-    - time
-    - difficulty
-    - nonce
-  enabled: "yes"
-  explorer_type: "Iquidus"
-
-
-GIN:
-  cmd: "gincoin-cli"
-  method: "share"
-  nethash_block: 30
-  attribute:
-    - height
-    - time
-    - difficulty
-    - nonce
-    - nethash
-  enabled: "yes"
-  explorer_type: "wallet"
-
-
-DXC:
-  cmd: "dixicoin-cli"
-  method: "share"
-  nethash_block: 30
-  attribute:
-    - height
-    - time
-    - difficulty
-    - nonce
-    - nethash
-  enabled: "yes"
-  explorer_type: "wallet"
-
-
-FLM:
-  cmd: "folm-cli"
-  method: "share"
-  nethash_block: 30
-  attribute:
-    - height
-    - time
-    - difficulty
-    - nonce
-    - nethash
-  enabled: "yes"
-  explorer_type: "wallet"
-
-  # url: "https://explorer.folm.io/"
-  # method: "share"
-  # attribute:
-  #   - Block
-  #   - Time
-  #   - Network
-  #   - Difficulty
-  # enabled: "yes"
-  # explorer_type: "UExplorer"
-
-
-BTX:
-  cmd: "bitcore-cli"
-  method: "diff"
-  attribute:
-    - height
-    - time
-    - difficulty
-    - nonce
-    - nethash
-  enabled: "no"
-  explorer_type: "wallet"
-
-
-SPD:
-  url: "http://explorer.stipend.me/"
-  method: "share_pos"
-  attribute:
-    - height
-    - time
-    - difficulty
-    - flags
-    - nonce
-  enabled: "yes"
-  explorer_type: "Iquidus"
-
-
-IFX:
-  cmd: "infinex-cli"
-  method: "share"
-  nethash_block: 30
-  attribute:
-    - height
-    - time
-    - difficulty
-    - nonce
-    - nethash
-  enabled: "yes"
-  explorer_type: "wallet"
-
-
-STAK:
-  cmd: "straks-cli"
-  method: "share"
-  nethash_block: 30
-  attribute:
-    - height
-    - time
-    - difficulty
-    - nonce
-    - nethash
-  enabled: "yes"
-  explorer_type: "wallet"
-
-
 XVG:
   url: "https://verge-blockchain.info/"
   method: "share_pos_multi_algo"
@@ -220,6 +126,20 @@ XVG:
     - flags
   enabled: "no"
   explorer_type: "Iquidus"
+
+
+VTC:
+  cmd: "vertcoin-cli"
+  method: "share"
+  nethash_block: 30
+  attribute:
+    - height
+    - time
+    - difficulty
+    - nonce
+    - nethash
+  enabled: "yes"
+  explorer_type: "wallet"
 
 
 MONA:
