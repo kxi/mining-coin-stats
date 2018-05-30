@@ -248,3 +248,31 @@ MONA:
     - nethash
   enabled: "yes"
   explorer_type: "wallet"
+
+
+ZEC:
+  cmd: "zcash-cli"
+  method: "share"
+  nethash_block: 120
+  attribute:
+    - height
+    - time
+    - difficulty
+    - nonce
+    - nethash
+  enabled: "yes"
+  explorer_type: "wallet"
+
+
+ZCL:
+  cmd: "zclassic-cli"
+  method: "share"
+  nethash_block: 120
+  attribute:
+    - height
+    - time
+    - difficulty
+    - nonce
+    - nethash
+  enabled: "yes"
+  explorer_type: "wallet"
