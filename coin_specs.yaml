@@ -86,7 +86,7 @@ PROTON:
     - time
     - difficulty
     - nonce
-  enabled: "yes"
+  enabled: "no"
   explorer_type: "Iquidus"
 
 
@@ -260,7 +260,7 @@ ZEC:
     - difficulty
     - nonce
     - nethash
-  enabled: "yes"
+  enabled: "no"
   explorer_type: "wallet"
 
 
@@ -274,5 +274,5 @@ ZCL:
     - difficulty
     - nonce
     - nethash
-  enabled: "yes"
+  enabled: "no"
   explorer_type: "wallet"
