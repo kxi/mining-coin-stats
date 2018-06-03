@@ -276,3 +276,17 @@ ZCL:
     - nethash
   enabled: "no"
   explorer_type: "wallet"
+
+
+XMN:
+  cmd: "motion-cli"
+  method: "share"
+  nethash_block: 120
+  attribute:
+    - height
+    - time
+    - difficulty
+    - nonce
+    - nethash
+  enabled: "yes"
+  explorer_type: "wallet"
