@@ -290,3 +290,17 @@ XMN:
     - nethash
   enabled: "yes"
   explorer_type: "wallet"
+
+
+REEF:
+  cmd: "reef-cli"
+  method: "share"
+  nethash_block: 120
+  attribute:
+    - height
+    - time
+    - difficulty
+    - nonce
+    - nethash
+  enabled: "yes"
+  explorer_type: "wallet"
